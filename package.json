@@ -1,0 +1,26 @@
+{
+  "name": "vidr",
+  "version": "1.0.0",
+  "description": "A video hosting website",
+  "main": "core/main/core.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:thislooksfun/vidr.git"
+  },
+  "author": "thislooksfun",
+  "contributors": {
+    "name": "fmressel"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thislooksfun/vidr/issues"
+  },
+  "homepage": "https://github.com/thislooksfun/vidr",
+  "dependencies": {
+    "express": "^4.13.3",
+    "path": "^0.12.7"
+  }
+}
