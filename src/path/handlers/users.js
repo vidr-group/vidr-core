@@ -1,4 +1,4 @@
-var app = require("../../core/server.js").app
+var app = require("../../main/server.js").app
 var util = require("../../util/util.js")
 
 module.exports = main
