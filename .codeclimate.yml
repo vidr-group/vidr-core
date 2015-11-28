@@ -8,11 +8,15 @@ engines:
       - c7210e89ff8fc3264cb37031374915c1
   fixme:
     enabled: true
+    exclude_fingerprints:
+      - 6c8cdd505f28b910eec87b430136ed70
+      - 937abe61f4c072412bfb154dcaef617b
+      - ac84530d42fa69d3f772f72dc28259e7
 ratings:
   paths:
-  - "**.coffee"
-  - "**.js"
-  - "**.jsx"
+    - "**.coffee"
+    - "**.js"
+    - "**.jsx"
 exclude_paths:
-- node_modules/**/*
-- spec/**/*
+  - node_modules/**/*
+  - spec/**/*
