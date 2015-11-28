@@ -4,11 +4,11 @@
   "description": "A video hosting website",
   "main": "core/main/core.js",
   "scripts": {
-    "test": "node_modules/jasmine-node/bin/jasmine-node --coffee --verbose --noStackTrace spec/"
+    "test": "node_modules/jasmine-node/bin/jasmine-node --coffee --verbose spec/"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:thislooksfun/vidr.git"
+    "url": "git@github.com:vidr-group/vidr-core.git"
   },
   "author": "thislooksfun",
   "contributors": {
@@ -16,9 +16,9 @@
   },
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/thislooksfun/vidr/issues"
+    "url": "https://github.com/vidr-group/vidr-core/issues"
   },
-  "homepage": "https://github.com/thislooksfun/vidr",
+  "homepage": "http://vidr.me",
   "dependencies": {
     "coffee-script": "^1.10.0",
     "express": "^4.13.3",
