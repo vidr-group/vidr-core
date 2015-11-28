@@ -10,10 +10,11 @@
     "type": "git",
     "url": "git@github.com:vidr-group/vidr-core.git"
   },
-  "author": "thislooksfun",
-  "contributors": {
-    "name": "fmressel"
-  },
+  "author": "vidr-group (http://vidr.me)",
+  "contributors": [
+    "thislooksfun",
+    "fmressel"
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/vidr-group/vidr-core/issues"
