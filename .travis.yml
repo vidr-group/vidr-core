@@ -3,5 +3,8 @@ node_js:
   - "stable"
   - "5.0"
 
+services:
+  - mongodb
+
 notifications:
   email: false
