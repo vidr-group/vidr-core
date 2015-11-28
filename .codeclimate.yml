@@ -1,0 +1,18 @@
+---
+engines:
+  coffeelint:
+    enabled: true
+  eslint:
+    enabled: true
+    exclude_fingerprints:
+      - c7210e89ff8fc3264cb37031374915c1
+  fixme:
+    enabled: true
+ratings:
+  paths:
+  - "**.coffee"
+  - "**.js"
+  - "**.jsx"
+exclude_paths:
+- node_modules/**/*
+- spec/**/*
