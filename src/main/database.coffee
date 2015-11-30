@@ -3,10 +3,10 @@ Schema = mongoose.Schema
 
 module.exports =
   models:
-    user:    null
+    user: null
     authKey: null
     channel: null
-    video:   null
+    video: null
   
   init: (cb) ->
     if cb?

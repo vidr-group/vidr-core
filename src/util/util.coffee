@@ -3,18 +3,21 @@ path = require "path"
 
 err = (req, res, code, msg) ->
   unless msg?
-    msg = if httpMessages[code]? then "Error "+code+": "+httpMessages[code] else "Unknown error code: "+code
+    if httpMessages[code]?
+      msg = "Error #{code}: #{httpMessages[code]}"
+    else
+      msg = "Unknown error code: #{code}"
   
   res.status(code).send(
-    JSON.stringify { type:"error", path:req._parsedUrl.pathname, code:code, message:msg }
+    JSON.stringify {type: "error", path: req._parsedUrl.pathname, code: code, message: msg}
   )
 
 requireAll = (dir, handler) ->
-  relPath = path.join(__dirname, "../"+dir)
+  relPath = path.join(__dirname, "../#{dir}")
   files = fs.readdirSync(relPath)
   
   for f in files
-    obj = require("../"+dir+"/"+f)
+    obj = require("../#{dir}/#{f}")
     handler(obj) if handler?
 
 httpMessages =

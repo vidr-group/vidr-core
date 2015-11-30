@@ -14,7 +14,7 @@ registerErrHandlers = ->
 
   # 500: internal server error
   app.use (err, req, res, next) ->
-    console.error(err.stack);
+    console.error(err.stack)
     util.err(req, res, 500)
     
 module.exports =
