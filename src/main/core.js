@@ -1,4 +1,6 @@
-var coffee =   require("coffee-script/register")
+// Allow coffeescript files to be used
+require("coffee-script/register")
+
 var server =   require("./server")
 var paths =    require("../path/paths")
 var database = require("./database")
