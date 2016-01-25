@@ -1,6 +1,7 @@
-app =  require("express")()
+app = require("express")()
 
-start = -> app.listen(3000)
+start = ->
+  app.listen(3000)
 
 module.exports =
   app: app
