@@ -9,7 +9,7 @@ coffeelint -f ./coffeelint.json test || EXIT_STATUS=$?
 if [ $TRAVIS ]; then
   printf "\nGenerating coverate report... "
   istanbul report || EXIT_STATUS=$?
-  echo "Uploading coverage to codeclimate:"
+  echo "\nUploading coverage to codeclimate:"
   codeclimate-test-reporter < ./coverage/lcov.info
 else
   echo "Not running on travis, skipping coverage\n"
