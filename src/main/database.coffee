@@ -3,10 +3,10 @@ Schema = mongoose.Schema
 
 module.exports =
   models:
-    user: null
-    authKey: null
-    channel: null
-    video: null
+    User: null
+    AuthKey: null
+    Channel: null
+    Video: null
   
   init: (cb) ->
     if cb?
@@ -25,7 +25,7 @@ module.exports =
         required: true
       # TODO: more settings and things here?
     )
-    @models.user = mongoose.model "User", userSchema
+    @models.User = mongoose.model "User", userSchema
     
     authKeySchema = new Schema(
       user:
@@ -36,7 +36,7 @@ module.exports =
         required: true
         unique: true
     )
-    @models.authKey = mongoose.model "AuthKey", authKeySchema
+    @models.AuthKey = mongoose.model "AuthKey", authKeySchema
     
     channelSchema = new Schema(
       title:
@@ -50,7 +50,7 @@ module.exports =
         required: true
         unique: true
     )
-    @models.channel = mongoose.model "Channel", channelSchema
+    @models.Channel = mongoose.model "Channel", channelSchema
     
     videoSchema = new Schema(
       title:
@@ -64,7 +64,7 @@ module.exports =
         required: true
         unique: true
     )
-    @models.video = mongoose.model "Video", videoSchema
+    @models.Video = mongoose.model "Video", videoSchema
   
   stop: (cb) ->
     mongoose.disconnect cb

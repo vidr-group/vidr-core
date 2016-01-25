@@ -65,7 +65,7 @@ describe "Model", ->
   it "list should exist", ->
     expect(database.models).to.be.ok
   
-  types = ["user", "authKey", "channel", "video"]
+  types = ["User", "AuthKey", "Channel", "Video"]
   
   testIsNull = (t) ->
     it "#{t} should be null", ->
