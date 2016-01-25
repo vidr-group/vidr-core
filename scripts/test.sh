@@ -1,7 +1,10 @@
 EXIT_STATUS=0
-mocha --compilers coffee:coffee-script/register || EXIT_STATUS=$?
-echo "\nlinting 'src' directory:\n"
+echo "Running tests:"
+mocha --recursive --compilers coffee:coffee-script/register --require coffee-coverage/register-istanbul test || EXIT_STATUS=$?
+printf "\nGenerating coverate report... "
+istanbul report || EXIT_STATUS=$?
+echo "\nLinting 'src' directory:\n"
 coffeelint -f ./coffeelint.json src || EXIT_STATUS=$?
-echo "\nlinting 'test' directory:\n"
+echo "\nLinting 'test' directory:\n"
 coffeelint -f ./coffeelint.json test || EXIT_STATUS=$?
 exit $EXIT_STATUS
