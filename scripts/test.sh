@@ -16,7 +16,7 @@ if [ $TRAVIS ]; then
   echo "\nUploading coverage to codeclimate:"
   codeclimate-test-reporter < ./coverage/lcov.info
 else
-  echo "Not running on travis, skipping coverage upload\n"
+  echo "Not running on Travis, skipping coverage upload\n"
 fi
 
 exit $EXIT_STATUS
