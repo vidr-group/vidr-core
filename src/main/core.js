@@ -1,3 +1,5 @@
+// NOTE:This file is to be used ONLY to co-ordinate the boot sequence. No logic should be placed in here.
+
 // Allow coffeescript files to be used
 require("coffee-script/register")
 
