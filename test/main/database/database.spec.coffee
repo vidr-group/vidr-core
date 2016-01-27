@@ -1,5 +1,6 @@
+database = require '../../../src/main/database'
+
 describe "Database", ->
-  database = require '../../src/main/database'
   mongoose = require 'mongoose'
   
   it "should exist", ->
@@ -54,7 +55,6 @@ describe "Database", ->
 
 
 describe "Model", ->
-  database = require '../../src/main/database'
   
   # beforeEach (done) ->
   #   database.init done
