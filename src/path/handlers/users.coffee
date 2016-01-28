@@ -12,6 +12,7 @@ main = ->
 get = (req, res) ->
   User = database.models.User
   
+  #TODO: Implement streamline? (https://github.com/Sage/streamlinejs)
   User.findOne({"username": req.params.username}, "username").then (a) ->
     if a? or b? or c?
       res.send("a = #{a}\nb = #{b}\nc = #{c}")
