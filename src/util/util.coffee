@@ -22,6 +22,7 @@ requireAll = (dir, handler) ->
       requireAll(path.join(dir, f), handler)
     else
       obj = require("../../#{dir}/#{f}")
+      ### istanbul ignore else ###
       handler(obj) if handler?
 
 httpMessages =
