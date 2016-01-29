@@ -13,12 +13,16 @@ err = (req, res, code, msg) ->
   )
 
 requireAll = (dir, handler) ->
-  relPath = path.join(__dirname, "../#{dir}")
+  relPath = path.join(__dirname, "../../#{dir}")
   files = fs.readdirSync(relPath)
   
   for f in files
-    obj = require("../#{dir}/#{f}")
-    handler(obj) if handler?
+    stats = fs.statSync(path.join(relPath, f))
+    if stats.isDirectory()
+      requireAll(path.join(dir, f), handler)
+    else
+      obj = require("../../#{dir}/#{f}")
+      handler(obj) if handler?
 
 httpMessages =
   # 1xx: Informational

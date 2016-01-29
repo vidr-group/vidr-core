@@ -4,7 +4,7 @@ util = require "../util/util"
 register = ->
   app.get "/", (req, res) -> res.send("Hello World!")
   
-  util.requireAll "path/handlers", (obj) -> obj()
+  util.requireAll "src/path/handlers", (obj) -> obj()
   
   registerErrHandlers()
 
